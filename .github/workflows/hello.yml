@@ -3,7 +3,7 @@ name: hello
 
 on:
   push:
-    branches: [main,branch-4-yaml-test]
+    branches: [main, branch-4-yaml-test]
   workflow_dispatch:
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Print run details
         run: |
@@ -20,3 +20,10 @@ jobs:
           echo "Actor: ${{ github.actor }}"
           node --version
           ls -la
+
+  windows-job:
+    runs-on: windows-latest
+
+    steps:
+      - name: Print runner OS
+        run: echo "Runner OS: ${{ runner.os }}"
