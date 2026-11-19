@@ -3,7 +3,7 @@ name: hello
 
 on:
   push:
-    branches: [main]
+  branches: [main,branch-4-yaml-test]
   workflow_dispatch:
 
 jobs:
