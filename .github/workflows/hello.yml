@@ -21,7 +21,7 @@ jobs:
           node --version
           ls -la
 
-    windows-job:
+  windows-job:
     runs-on: windows-latest
 
     steps:
